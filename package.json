@@ -9,5 +9,8 @@
   },
   "scripts": {
     "webpack": "webpack --config webpack.config.js --display-error-details"
+  },
+  "dependencies": {
+    "markdown": "^0.5.0"
   }
 }
