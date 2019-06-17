@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  try-webpack:
+    image: try-webpack:dev
+    container_name: try-webpack
+    command: /bin/sh
+    build:
+      context: .
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+
+volumes:
+  node_modules:
