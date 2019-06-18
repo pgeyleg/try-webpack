@@ -5,11 +5,12 @@ services:
     container_name: try-webpack
     command: /bin/sh
     build:
-      context: .
+      context: ../
+      dockerfile: docker/Dockerfile
     environment:
       NODE_ENV: development
     volumes:
-      - .:/app
+      - ../:/app
       - node_modules:/app/node_modules
 
 volumes:
