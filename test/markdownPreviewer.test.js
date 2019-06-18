@@ -1,7 +1,7 @@
 import markdownPreviewer from "../js/markdownPreviewer"
 
-describe("canary", function() {
-  it("can run a test", function() {
+describe("markdownPreviewer", function() {
+  it("should exist", function() {
     expect(markdownPreviewer).toBeDefined();
   });
 });
