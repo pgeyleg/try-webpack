@@ -3,12 +3,14 @@ services:
   try-webpack:
     image: try-webpack:dev
     container_name: try-webpack
-    command: /bin/sh
+    command: yarn webpack-dev-server
     build:
       context: ../
       dockerfile: docker/Dockerfile
     environment:
       NODE_ENV: development
+    ports:
+      - 8080:8080
     volumes:
       - ../:/app
       - node_modules:/app/node_modules
