@@ -11,9 +11,9 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "webpack": "webpack $npm_package_config_webpack_args",
-    "webpack:production": "webpack $npm_package_config_webpack_args --env=production",
-    "webpack:test": "webpack --config test/webpack.test.config.js --display-error-details",
+    "webpack": "webpack --config config/webpack.config.js",
+    "webpack:production": "webpack --config config/webpack.config.js --env=production",
+    "webpack:test": "webpack --config config/webpack.test.config.js --display-error-details",
     "jest": "jest test/bundle.test.js",
     "test": "yarn webpack:test && yarn jest"
   },
