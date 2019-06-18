@@ -1,5 +1,4 @@
-# TODO:
-# We have to run webpack and then jest every time we change any file.
+// TODO: We have to run webpack and then jest every time we change any file.
 
 const path = require('path');
 
@@ -14,20 +13,6 @@ const testFiles = glob.sync("**/*.test.js").
 
 module.exports = {
   entry: testFiles,
-  output: {
-    path: path.resolve(__dirname, "."),
-    filename: "bundle.test.js"
-  },
-  mode: "none"
-};
-
-
-/* end new code */
-
-module.exports = {
-/* start new code */
-  entry: testFiles,
-/* end new code */
   output: {
     path: path.resolve(__dirname, "."),
     filename: "bundle.test.js"
