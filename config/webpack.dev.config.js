@@ -8,6 +8,7 @@ module.exports = Merge(CommonConfig, {
     path: path.join(__dirname, '../dist/dev'),
     filename: 'bundle.js'
   },
+  devtool: "inline-source-map",
   plugins: [
     new MiniCssExtractPlugin({ filename: "styles.css" })
   ]
