@@ -2,6 +2,7 @@ console.log("Hello from index.js!");
 import address from './address';
 import billing from './billing';
 import markdownPreviewer from "./markdownPreviewer";
+import "../css/styles.css";
 
 address.announce();
 billing.announce();
