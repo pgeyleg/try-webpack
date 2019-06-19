@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+ROOT_PATH="$(dirname "$0")/.."
+PROGRAM=`basename $0`
+
+usage() {
+  cat >&2 <<STR
+usage: $PROGRAM <options>
+Options passed into docker-compose command
+STR
+}
+
+parse_args() {
+  CONFIG_FILE="$ROOT_PATH/docker/docker-compose.yml"
+  if [[ "$#" < 1 ]]; then
+    echo 'Invalid arguments'
+    usage
+    exit 1
+  fi
+}
+
+parse_args "$@"
+
+docker-compose -f "$CONFIG_FILE" "$@"
