@@ -2,7 +2,8 @@ const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-   module: {
+  entry: './js/index.js',
+  module: {
     rules: [
       {
         test: /.css$/,
@@ -18,6 +19,5 @@ module.exports = {
       template: "./html/index.html"
     })
   ],
-  entry: './js/index.js',
   mode: 'none'
 };
