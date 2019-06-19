@@ -20,4 +20,3 @@ https://medium.com/ag-grid/webpack-tutorial-understanding-how-it-works-f73dfa164
 4. Run command "/bin/sh":
 
        bin/container exec try-webpack /bin/sh
-

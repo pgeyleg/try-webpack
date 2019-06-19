@@ -14,12 +14,14 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "webpack:dev": "webpack --config config/webpack.config.js",
+    "webpack:dev": "webpack --config config/webpack.config.js --env=development",
     "webpack:production": "webpack --config config/webpack.config.js --env=production",
-    "webpack:test": "webpack --config config/webpack.test.config.js --display-error-details",
+    "webpack:test": "webpack --config config/webpack.test.config.js --env=test",
     "webpack-dev-server": "webpack-dev-server --config config/webpack.config.js --host 0.0.0.0",
     "jest": "jest test/bundle.test.js",
-    "test": "yarn webpack:test && yarn jest"
+    "test": "yarn webpack:test && yarn jest",
+    "webpack:test:server": "webpack --config config/webpack.config.js --env=test --watch",
+    "jest:server": "jest test/bundle.test.js --watch"
   },
   "dependencies": {
     "markdown": "^0.5.0",

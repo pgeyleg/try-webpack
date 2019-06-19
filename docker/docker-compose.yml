@@ -15,5 +15,33 @@ services:
       - ../:/app
       - node_modules:/app/node_modules
 
+  test:
+    image: try-webpack:dev
+    container_name: test
+    command: yarn run jest:server
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      NODE_ENV: test
+    volumes:
+      - ../:/app
+      - node_modules:/app/node_modules
+    depends_on:
+      - test-server
+
+  test-server:
+    image: try-webpack:dev
+    container_name: test-server
+    command: yarn run webpack:test:server
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      NODE_ENV: test
+    volumes:
+      - ../:/app
+      - node_modules:/app/node_modules
+
 volumes:
   node_modules:
